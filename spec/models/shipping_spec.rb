@@ -6,7 +6,7 @@ RSpec.describe Shipping, type: :model do
       [
         { service_level: 'priority', price_cents: 2500, arrival_date: 2.days.from_now.to_date.to_s },
         { service_level: 'express', price_cents: 2000, arrival_date: 5.days.from_now.to_date.to_s },
-        { service_level: 'priority', price_cents: 1500, arrival_date: 10.days.from_now.to_date.to_s }
+        { service_level: 'normal', price_cents: 1500, arrival_date: 10.days.from_now.to_date.to_s }
       ]
     end
 

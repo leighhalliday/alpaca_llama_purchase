@@ -1,9 +1,9 @@
 module Shipping
   def self.rates(postal_code:, weight_kg:)
     [
-      { service_level: 'priority', price_cents: ((weight_kg * 0.25) * 100).to_i, arrival_date: 2.days.from_now.to_date.to_s },
-      { service_level: 'express', price_cents: ((weight_kg * 0.20) * 100).to_i, arrival_date: 5.days.from_now.to_date.to_s },
-      { service_level: 'priority', price_cents: ((weight_kg * 0.15) * 100).to_i, arrival_date: 10.days.from_now.to_date.to_s }
+      RateCalculator.priority(weight_kg),
+      RateCalculator.express(weight_kg),
+      RateCalculator.normal(weight_kg)
     ]
   end
 
