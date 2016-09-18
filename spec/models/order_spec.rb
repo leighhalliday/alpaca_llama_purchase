@@ -27,6 +27,8 @@ RSpec.describe Order, type: :model do
 
   describe '.tracking_code' do
     it 'returns tracking code' do
+      skip('Not yet implemented')
+
       order = create(:order)
       llama = create(:llama, order: order)
       order.ship!
