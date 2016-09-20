@@ -1,24 +1,12 @@
-# README
+# AlpacaLlama
+## You buy it, we ship it!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the "Purchase" side of the AlpacaLlama enterprise.
 
-Things you may want to cover:
+This app handles the following functionality within the `Purchase` module:
 
-* Ruby version
+- Llama
+- Order
+- Customer
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It communicates to the __Shipping__ service through the `Shipping` module.
