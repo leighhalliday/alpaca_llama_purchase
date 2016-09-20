@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/shipments
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"order_id":1,"address":{"postal_code":"M8X1A3"},"weight_kg":100.0,"service_level":"priority"}}'
+    headers:
+      X-Auth-Token:
+      - LOCAL123
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - localhost:3000
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"154670839a3c13254c9b5938742b2057"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 78a47216-bfda-4001-98c8-18d931d021fc
+      X-Runtime:
+      - '0.367804'
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"shipment_id":12}'
+    http_version: 
+  recorded_at: Tue, 20 Sep 2016 03:04:32 GMT
+recorded_with: VCR 3.0.3

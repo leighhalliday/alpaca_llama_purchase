@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Shipping, type: :model do
+RSpec.describe Shipping, type: :model, vcr: { record: :none } do
   describe '.rates' do
     let(:expected_rates) do
       [

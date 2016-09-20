@@ -12,6 +12,8 @@ RSpec.describe Order, type: :model do
 
   describe '.ship!' do
     it 'updates order status to shipped' do
+      expect(Shipping).to receive(:schedule).and_return([true, 123])
+
       order = create(:order)
       llama = create(:llama, order: order)
 
@@ -21,7 +23,7 @@ RSpec.describe Order, type: :model do
       order.ship!
 
       expect(order.status).to eq('shipped')
-      expect(order.shipment_id).to be_present
+      expect(order.shipment_id).to eq(123)
     end
   end
 

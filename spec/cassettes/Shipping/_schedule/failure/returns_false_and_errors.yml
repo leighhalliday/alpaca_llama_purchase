@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/shipments
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"order_id":1,"address":{"postal_code":null},"weight_kg":100.0,"service_level":null}}'
+    headers:
+      X-Auth-Token:
+      - LOCAL123
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - localhost:3000
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 42320df3-0349-40e8-804c-cc0f5fdd9684
+      X-Runtime:
+      - '0.011715'
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"postal_code":"can''t be blank","service_level":"can''t
+        be blank"}}'
+    http_version: 
+  recorded_at: Tue, 20 Sep 2016 03:04:32 GMT
+recorded_with: VCR 3.0.3
