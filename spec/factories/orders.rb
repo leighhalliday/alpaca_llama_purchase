@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :order do
+  factory :order, class: Purchase::Order do
     subtotal_cents 10000
     tax_cents 1300
     shipping_cents 1500

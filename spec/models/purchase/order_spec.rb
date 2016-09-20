@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Order, type: :model do
+RSpec.describe Purchase::Order, type: :model do
   describe '.weight_kg' do
     it 'returns total weight of all llamas in this order' do
       order = create(:order)

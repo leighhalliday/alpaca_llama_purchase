@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :llama do
+  factory :llama, class: Purchase::Llama do
     name 'Spitty'
     age 2
     weight_kg 100.0
